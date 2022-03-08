@@ -15,21 +15,13 @@ describe('Appointment cypress', () => {
         //Date Choice//
         cy.get(':nth-child(5) > .usedDate > .ui-state-default',{timeout:100000}).click()
         
-        if(cy.get('#textViewTable_0 > tbody > tr > td > a')){
-            cy.get('#textViewTable_0 > tbody > tr > td > a').click()
+        cy.get('#textViewTable_0 > tbody > tr > td > a').click()
             cy.get('[type="checkbox"]').check({ force: true }).should('be.checked')
             
-            //create appointment//
-            cy.get('[type="submit"]').click()
-        }
-        else{
-            cy.get(':nth-child(3) > :nth-child(5) > .ui-state-default').click()
-            cy.get('#textViewTable_0 > tbody > tr > td > a').click()
-            cy.get('[type="checkbox"]').check({ force: true }).should('be.checked')
-           
-            //create appointment//
-            cy.get('[type="submit"]',{timeout:100000}).click()
-        }
+        //create appointment//
+        cy.get('[type="submit"]').click()
+            
+       
         //show appointments //
         cy.get('[href="/client?printsched=on&ven=11606505"]').click()
         cy.get('[type="button"]').click()
