@@ -19,17 +19,10 @@ Run this command
 Then go to the visual code and check folders of cypress .
 The folders are built accoring to this directory. 
 
-My_project_Name
-    |--- cypress_folder
-           |-- downloads_folder
-           |-- fixtures_folder
-           |-- integration_folder
-           |-- plugins
-           |-- support
-    |--- node_modules_folder
-    |--- cypress.json
-    |--- package.json
-    |--- package-lock.json
+
+Directory Path of Cypress
+<img src="/images/directory.png" alt="Alt text" title="directory path of cypress">
+
 
 
 Then build the new cypress testing file('first_test.js') under the directory path of ( My_project_Name/cypress_folder/integration_folder)
